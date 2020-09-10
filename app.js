@@ -186,3 +186,5 @@ function onOne() {
     document.getElementById('current-0').innerHTML = 0;
     document.getElementById('current-1').textContent = 0;
 }
+
+console.log();
