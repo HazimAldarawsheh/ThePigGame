@@ -45,6 +45,8 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         if (dice === 1 || dice1===1) {
             //add score
             nextPlayer();
+
+            //testing perposes
             console.log('dice 1= '+dice);
             console.log('dice 2= '+dice1);
             
@@ -53,14 +55,14 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         } else if(dice1 ===6 && dice ===6){
             document.querySelector('#score-' + activePlayer).textContent = 0;
             nextPlayer();
-            roundScore();
+            
             console.log('super greedy------- 2 6s')
             
         }
         
         else {
-            //change player
-            roundScore += dice+dice1;
+            
+            roundScore += +dice + +dice1;
             if (((dice === 6 && PRoundScore === 6)||dice1 === 6 && PRoundScore === 6)
                     ||((dice === 6 && PRoundScore1 === 6)||dice1 === 6 && PRoundScore1 === 6)) {
 
@@ -75,7 +77,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
             } else {
 
                 PRoundScore = dice;
-                document.querySelector('#current-' + activePlayer).value = roundScore;
+                document.querySelector('#current-' + activePlayer).textContent = roundScore;
 
 
             }
