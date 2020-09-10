@@ -187,4 +187,3 @@ function onOne() {
     document.getElementById('current-1').textContent = 0;
 }
 
-console.log();
